@@ -1,0 +1,186 @@
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems,skins,hooks,breakable}
+
+% THEOREM: theorem, tproof (blue)
+\definecolor{mytheorembg}{HTML}{F2F2F9}
+\definecolor{mytheoremfr}{HTML}{00007B}
+\definecolor{myptheorembg}{HTML}{FFFFFF}
+\definecolor{myptheoremfr}{HTML}{00007B}
+
+\newtcbtheorem[number within = section]{theorem}{Theorem}
+{
+    enhanced,
+    colback = mytheorembg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mytheoremfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mytheoremfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{th}
+
+\newtcbtheorem[number within = section]{tproof}{\textit{Proof:}}
+{
+    enhanced,
+    colback = myptheorembg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mytheoremfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\smallskip,
+    coltitle = mytheoremfr,
+    fonttitle = \sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{thproof}
+
+% DEFINITION: definition (red)
+\definecolor{mydefinitbg}{HTML}{FFE3DE}
+\definecolor{mydefinitfr}{HTML}{EE2600}
+
+\newtcbtheorem[number within = section]{definition}{Definition}
+{
+    enhanced,
+    colback = mydefinitbg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mydefinitfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mydefinitfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{def}
+
+% PROPOSITION: proposition, pproof (pink)
+\definecolor{mypropbg}{HTML}{FFEDFF}
+\definecolor{mypropfr}{HTML}{FF57FF}
+\definecolor{myppropbg}{HTML}{FFFFFF}
+\definecolor{myppropfr}{HTML}{FF57FF}
+
+\definecolor{mypropbg}{HTML}{FDEBD7}
+\definecolor{mypropfr}{HTML}{BC5E00}
+\definecolor{myppropbg}{HTML}{FFFFFF}
+\definecolor{myppropfr}{HTML}{BC5E00}
+
+\newtcbtheorem[number within = section]{proposition}{Proposition}
+{
+    enhanced,
+    colback = mypropbg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mypropfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mypropfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{prop}
+
+\newtcbtheorem[number within = section]
+{pproof}{\textit{Proof:}}{
+    enhanced,
+    colback = myppropbg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{myppropfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\smallskip,
+    coltitle = myppropfr,
+    fonttitle = \sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{pproof}
+
+% COROLLARY: corollary, cproof (lighter blue)
+\definecolor{mycorobg}{HTML}{E7F9FF}
+\definecolor{mycorofr}{HTML}{008DBC}
+\definecolor{mypcorobg}{HTML}{FFFFFF}
+\definecolor{mypcorofr}{HTML}{008DBC}
+
+\newtcbtheorem[number within = section]
+{corollary}{Corollary}{
+    enhanced,
+    colback = mycorobg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mycorofr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mycorofr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{coro}
+
+\newtcbtheorem[number within = section]
+{cproof}{\textit{Proof:}}{
+    enhanced,
+    colback = mypcorobg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mypcorofr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\smallskip,
+    coltitle = mypcorofr,
+    fonttitle = \sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{cproof}
+
+% EXAMPLE: example
+\definecolor{myexamplebg}{HTML}{FFFFFF}
+\definecolor{myexamplefr}{HTML}{309130}
+
+\newtcbtheorem[number within = section]{example}{Example}
+{
+    enhanced,
+    colback = myexamplebg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{myexamplefr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = myexamplefr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{ex}

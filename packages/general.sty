@@ -1,0 +1,71 @@
+\usepackage[a4paper,
+            bindingoffset=0.2in,
+            left=1in,
+            right=1in,
+            top=1.5in,
+            bottom=1.5in,
+            footskip=.25in]{geometry}
+
+% \pagestyle{fancy}
+% \fancyhead{}\fancyfoot{}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[none]{hyphenat}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Course \#}
+\chead{Title}
+\rhead{\thepage}
+\cfoot{}
+
+% Changing the font to Latin Modern (Sans Serif)
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+% remove indentation on every paragraph
+\setlength{\parindent}{0pt}
+
+% for removing the title from the Abstract
+\usepackage{abstract}
+\renewcommand{\abstractname}{}
+\renewcommand{\absnamepos}{empty}
+
+% Symbol shortcuts
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+
+% Operator shortcuts
+% \newcommand{\d}{\mathrm d}
+\newcommand{\dx}{\mathrm dx}
+\newcommand{\dy}{\mathrm dy}
+
+% Other shortcuts
+\newcommand{\maps}{\longmapsto}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\linediv}{
+    \begin{center}
+        \rule{0.6\paperwidth}{0.4pt}
+    \end{center}
+}
