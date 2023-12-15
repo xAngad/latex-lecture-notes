@@ -2,6 +2,31 @@
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{theorems,skins,hooks,breakable}
 
+
+% DEFINITION: definition (red)
+\definecolor{mydefinitbg}{HTML}{FFE3DE}
+\definecolor{mydefinitfr}{HTML}{EE2600}
+
+\newtcbtheorem[number within = section]{definition}{Definition}
+{
+    enhanced,
+    colback = mydefinitbg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mydefinitfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mydefinitfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{def}
+
+
 % THEOREM: theorem, tproof (blue)
 \definecolor{mytheorembg}{HTML}{F2F2F9}
 \definecolor{mytheoremfr}{HTML}{00007B}
@@ -46,28 +71,6 @@
     breakable
 }{thproof}
 
-% DEFINITION: definition (red)
-\definecolor{mydefinitbg}{HTML}{FFE3DE}
-\definecolor{mydefinitfr}{HTML}{EE2600}
-
-\newtcbtheorem[number within = section]{definition}{Definition}
-{
-    enhanced,
-    colback = mydefinitbg,
-    frame hidden,
-    boxrule = 0sp,
-    borderline west = {2pt}{0pt}{mydefinitfr},
-    sharp corners,
-    detach title,
-    before upper = \tcbtitle\par\smallskip,
-    coltitle = mydefinitfr,
-    fonttitle = \bfseries\sffamily,
-    description font = \mdseries,
-    terminator sign none,
-    separator sign none,
-    enhanced jigsaw,
-    breakable
-}{def}
 
 % PROPOSITION: proposition, pproof (pink)
 \definecolor{mypropbg}{HTML}{FFEDFF}
@@ -118,6 +121,7 @@
     breakable
 }{pproof}
 
+
 % COROLLARY: corollary, cproof (lighter blue)
 \definecolor{mycorobg}{HTML}{E7F9FF}
 \definecolor{mycorofr}{HTML}{008DBC}
@@ -161,6 +165,7 @@
     enhanced jigsaw,
     breakable
 }{cproof}
+
 
 % EXAMPLE: example
 \definecolor{myexamplebg}{HTML}{FFFFFF}
