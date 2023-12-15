@@ -2,11 +2,11 @@
 
 Simple lecture notes template with colored boxes, focused on Mathematics.
 
-Box definitions and shortcuts are stored in [`boxes.sty`](packages/boxes.sty) and [`general.sty`](packages/general.sty) respectively.
+### Info
 
-Includes boxes for Theorems, Propositions, Corollaries (with proofs), and Definitions and Examples.
-
-Also in the repository is [`Lecture Notes Template.tex`](Lecture%20Notes%20Template.tex) containing use cases for all the environments, and some of the shortcuts.
+-   Includes boxes for Theorems, Propositions, Corollaries and Lemmas (with proofs), and Definitions and Examples - defined in [`boxes.sty`](packages/boxes.sty)
+-   Handles header imports, document setup, and shortcuts (like `\Q` for $\mathbb{Q}$ and `\R` for $\mathbb{R}$ etc. - defined in [`general.sty`](packages/general.sty)
+-   Also in the repository is [`Lecture Notes Template.tex`](Lecture%20Notes%20Template.tex) containing use cases for all the environments, and some of the shortcuts.
 
 ### Usage
 
