@@ -3,7 +3,6 @@
 \usepackage{packages/general}
 \usepackage{packages/boxes}
 
-
 \title{\textbf{Math Lecture Notes Template}}
 \author{Angad Kapoor}
 \date{}
@@ -11,7 +10,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-    Separate colored box environments for each section (with proofs), made using the \verb|tcolorbox| package.
+    Separate colored box environments for each section (with proofs), and some extras, made using the \verb|tcolorbox| package and more.
 \end{abstract}
 \tableofcontents
 
@@ -20,7 +19,7 @@
 \thispagestyle{empty}
 
 \section{Definitions}
-\begin{definition}{Cauchy Sequences}{ndist}
+\begin{definition}{Cauchy Sequences}{}
     A sequence $\{a_n\}$ of real numbers is a \textbf{Cauchy sequence} if $\forall \epsilon > 0$, $\exists N\in\N$ such that $|a_m - a_n| < \epsilon$ $\forall m,n \geq N$.
 \end{definition}
 
@@ -76,5 +75,25 @@
     Thus, $\frac{a_{n+1}}{a_n} = \frac{n+1}{n} = 1 + \frac{1}{n}$, which converges to $1$ as $n\to\infty$.
     Then, by the Cesaro-Stolz theorem, $\lim\limits_{n\to\infty}x_n = \lim\limits_{n\to\infty}a_n^{\frac{1}{n}} = \lim\limits_{n\to\infty} \frac{a_{n+1}}{a_n} = 1$.
 \end{example}
+
+\section{Miscellaneous}
+\begin{itemize}
+    \item[-] Environments can be created inside of one another, if required.
+    \begin{theorem}{Theorem A}{}
+        We will first show the following result:
+        \begin{lemma}{Required lemma}{}
+            Statement of lemma
+        \end{lemma}
+        \begin{lproof*}{}{}
+            Proof of lemma
+        \end{lproof*}
+        Hence, the statement of the theorem is true.
+    \end{theorem}
+
+    \item[-] Commonly used characters from \verb|mathbb| have been added as macros, like \verb|\R| for $\R$ and \verb|\Q| for $\Q$
+    
+    \item[-] Course-specific header and footer details can be modified in \verb|general.sty|
+\end{itemize}
+
 
 \end{document}
