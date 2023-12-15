@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{packages/general}
+\usepackage{packages/boxes}
+
+
+\title{\textbf{Math Lecture Notes Template}}
+\author{Angad Kapoor}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+    Separate colored box environments for each section (with proofs), made using the \verb|tcolorbox| package.
+\end{abstract}
+\tableofcontents
+
+\linediv
+
+\thispagestyle{empty}
+
+\section{Definitions}
+\begin{definition}{Cauchy Sequences}{ndist}
+    A sequence $\{a_n\}$ of real numbers is a \textbf{Cauchy sequence} if $\forall \epsilon > 0$, $\exists N\in\N$ such that $|a_m - a_n| < \epsilon$ $\forall m,n \geq N$.
+\end{definition}
+
+\section{Theorems}
+\begin{theorem}{Differentiability implies Continuity}{}
+    If a function $f$ is differentiable at a point $a$, then it is continuous at $a$.
+\end{theorem}
+\begin{tproof*}{}{}
+    We want to show that $\lim\limits_{x\to a}f(x) = f(a)$. 
+    First, notice that $f(x)$ can be rewritten as $f(x) = f(a) + \dfrac{f(x) - f(a)}{x-a}(x-a)$. 
+    Since $f$ is differentiable at $a$, we know that $\lim\limits_{x\to a}\dfrac{f(x) - f(a)}{x-a}$ exists and is finite.
+    $x$ is continuous, so $\lim\limits_{x\to a} (x-a) = 0$, so $f(x) \xrightarrow{x\to a} f(a) + f'(a)\cdot 0 = f(a)$. $\blacksquare$
+\end{tproof*}
+
+\section{Propositions}
+\begin{proposition}{}{}
+    A Cauchy sequence with a convergent subsequence converges.
+\end{proposition}
+\begin{pproof*}{}{}
+    Let $\{a_n\}$ be a Cauchy sequence, and let $\{a_{k_n}\}$ be a convergent subsequence of $\{a_n\}$.
+    Let $\lim\limits_{n\to\infty}x_{a_{k_n}} = a$.
+    Let $\epsilon > 0$.
+    Since $a$ is the limit of the subsequence, we know $\exists N_1\in\N$ such that $|a - a_{k_n}| < \frac{\epsilon}{2}$ $\forall n\geq N_1$.
+    Similarly, since $\{a_n\}$ is Cauchy, we know $\exists N_2\in\N$ such that $|a_m - a_n| < \frac{\epsilon}{2}$ $\forall m,n\geq N_2$.
+    Choose $N = \max\{N_1, N_2\}$.
+    Then, for $n\geq N$, we know $k_n \geq n \geq N$ (by the definition of a subsequence). 
+    So, $|a - a_n| \leq |a - a_{k_n}| + |a_{k_n} - a_n| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$.
+    Then, by the definition of the limit, $\{a_n\}$ converges to $a$. $\blacksquare$
+\end{pproof*}
+
+\section{Corollaries}
+\begin{corollary}{}{}
+    A Cauchy sequence converges.
+\end{corollary}
+\begin{cproof*}{}{}
+    Every Cauchy sequence has a convergent subsequence, and we just saw that every Cauchy sequence with a convergent subsequence converges.
+    Hence, every Cauchy sequence converges.
+\end{cproof*}
+
+\section{Examples}
+\begin{example}{Using Cesaro-Stolz}{}
+    Show that the sequence defined by $x_n = n^\frac{1}{n}$ converges, and find its limit. \\
+
+    We can define $x_n$ as $x_n = a_n^{\frac{1}{n}}$, where $a_n$ is another sequence $a_n = n$.
+    Thus, $\frac{a_{n+1}}{a_n} = \frac{n+1}{n} = 1 + \frac{1}{n}$, which converges to $1$ as $n\to\infty$.
+    Then, by the Cesaro-Stolz theorem, $\lim\limits_{n\to\infty}x_n = \lim\limits_{n\to\infty}a_n^{\frac{1}{n}} = \lim\limits_{n\to\infty} \frac{a_{n+1}}{a_n} = 1$.
+\end{example}
+
+\end{document}
