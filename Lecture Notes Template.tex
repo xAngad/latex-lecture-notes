@@ -79,15 +79,17 @@
 \section{Miscellaneous}
 Environments can be created inside of one another, if required.
 \begin{theorem}{Theorem A}{}
-    We will first show the following result:
-    \begin{lemma}{Required lemma}{}
+    We will prove Theorem A. 
+\end{theorem}
+\begin{tproof*}
+    To prove Theorem A, we will appeal to Lemma A.1
+    \begin{lemma}{Lemma A.1}{}
         Statement of lemma
     \end{lemma}
     \begin{lproof*}{}{}
         Proof of lemma
     \end{lproof*}
-    Hence, the statement of the theorem is true.
-\end{theorem}
-
+    From this, it follows that Theorem A is true.
+\end{tproof*}
 
 \end{document}
