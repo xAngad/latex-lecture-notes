@@ -166,6 +166,49 @@
     breakable
 }{cproof}
 
+% LEMMA: lemma, lproof (lighter blue)
+\definecolor{mylembg}{HTML}{EEFCF8}
+\definecolor{mylemfr}{HTML}{29B292}
+\definecolor{myplembg}{HTML}{FFFFFF}
+\definecolor{myplemfr}{HTML}{29B292}
+
+\newtcbtheorem[number within = section]
+{lemma}{Lemma}{
+    enhanced,
+    colback = mylembg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{mylemfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\par\smallskip,
+    coltitle = mylemfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{lem}
+
+\newtcbtheorem[number within = section]
+{lproof}{\textit{Proof:}}{
+    enhanced,
+    colback = myplembg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{myplemfr},
+    sharp corners,
+    detach title,
+    before upper = \tcbtitle\smallskip,
+    coltitle = myplemfr,
+    fonttitle = \sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{lproof}
 
 % EXAMPLE: example
 \definecolor{myexamplebg}{HTML}{FFFFFF}
