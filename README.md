@@ -33,6 +33,6 @@ _(the `*` prevents proofs from being numbered - remove if required)_
 
 ### Screenshots
 
-![Sample Image 1](images/sample_1.png)
-![Sample Image 2](images/sample_2.png)
-![Sample Image 3](images/sample_3.png)
+![Sample Image 1](https://github.com/xAngad/latex-lecture-notes/blob/main/images/sample_1.png)
+![Sample Image 2](https://github.com/xAngad/latex-lecture-notes/blob/main/images/sample_2.png)
+![Sample Image 3](https://github.com/xAngad/latex-lecture-notes/blob/main/images/sample_3.png)
