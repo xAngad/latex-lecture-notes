@@ -232,3 +232,25 @@
     enhanced jigsaw,
     breakable
 }{ex}
+
+% ASIDE: general info not really categorized in any other (grey)
+\definecolor{myremarkbg}{HTML}{EBEBEB}
+\definecolor{myremarkfr}{HTML}{4D4D4D}
+
+\newtcbtheorem[]{remark}{Remark}
+{
+    enhanced,
+    colback = myremarkbg,
+    frame hidden,
+    boxrule = 0sp,
+    borderline west = {2pt}{0pt}{myremarkfr},
+    sharp corners,
+    detach title,
+    coltitle = myremarkfr,
+    fonttitle = \bfseries\sffamily,
+    description font = \mdseries,
+    terminator sign none,
+    separator sign none,
+    enhanced jigsaw,
+    breakable
+}{remark}
