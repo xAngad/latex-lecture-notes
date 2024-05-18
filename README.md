@@ -6,6 +6,7 @@ Simple lecture notes template with colored boxes, focused on Mathematics.
 
 -   Includes boxes for Theorems, Propositions, Corollaries and Lemmas (with proofs), and Definitions and Examples - defined in [`boxes.sty`](https://github.com/xAngad/latex-lecture-notes/blob/main/packages/boxes.sty)
 -   Handles header imports, document setup, and shortcuts (like `\Q` for $\mathbb{Q}$ and `\R` for $\mathbb{R}$ etc. - defined in [`general.sty`](https://github.com/xAngad/latex-lecture-notes/blob/main/packages/general.sty)
+-   Sample code for inserting images and blocks of code is in [`samples.sty`](https://github.com/xAngad/latex-lecture-notes/blob/main/packages/samples.sty)
 -   Also in the repository is [`Lecture Notes Template.tex`](https://github.com/xAngad/latex-lecture-notes/blob/main/Lecture%20Notes%20Template.tex) containing use cases for all the environments, and some of the shortcuts.
 
 ### Usage
@@ -28,8 +29,9 @@ All modules follow a similar pattern:
     -   Statement: `\begin{lemma}{<name>}{<ref tag>} ... \end{lemma}`
     -   Proof: `\begin{lproof*}{<name>}{<ref tag>} ... \end{lproof*}`
 -   Examples: `\begin{example}{<name>}{<ref tag>} ... \end{example}`
+-   Remarks: `\begin{remark}{<name>}{<ref tag>} ... \end{remark}`
 
-_(the `*` prevents proofs from being numbered - remove if required)_
+_(the `*` is there to prevent the proof from being numbered - remove if required)_
 
 ### Screenshots
 

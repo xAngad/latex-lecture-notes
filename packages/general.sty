@@ -13,6 +13,7 @@
 \usepackage{mathtools}
 \usepackage{float}
 \usepackage{multicol}
+\usepackage{xfrac}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -35,7 +36,10 @@
 \renewcommand{\abstractname}{}
 \renewcommand{\absnamepos}{empty}
 
-% Symbol shortcuts
+% allow aligned equations to extend over page breaks
+\allowdisplaybreaks
+
+% symbol shortcuts for sets
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -45,20 +49,11 @@
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\I}{\mathbb{I}}
 
-\newcommand{\first}{$\text{1}^\text{st}$ }
-\newcommand{\second}{$\text{2}^\text{nd}$ }
-\newcommand{\third}{$\text{3}^\text{rd}$ }
-\newcommand{\fourth}{$\text{4}^\text{th}$ }
-\newcommand{\fifth}{$\text{5}^\text{th}$ }
-
-% Operator shortcuts
-% \newcommand{\d}{\mathrm d}
-\newcommand{\dx}{\mathrm dx}
-\newcommand{\dy}{\mathrm dy}
 
 % Other shortcuts
 \newcommand{\maps}{\longmapsto}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\mb}{\mathbf}
 \newcommand{\linediv}{
     \begin{center}
         \rule{0.6\paperwidth}{0.4pt}
