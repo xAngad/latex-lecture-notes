@@ -1,4 +1,4 @@
-# $\LaTeX$ Lecture Notes Template
+# LaTeX Lecture Notes Template
 
 Simple lecture notes template with colored boxes, focused on Mathematics.
 
